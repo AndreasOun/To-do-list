@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/AndreasOun/To-do-list#readme",
   "devDependencies": {
+    "webpack": "^5.82.0",
     "webpack-cli": "^5.0.2"
   }
 }
