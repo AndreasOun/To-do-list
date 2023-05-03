@@ -106,20 +106,17 @@ li:last-child {
 
 .popup select {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 20px !important; 
 }
 
-.priority-urgent {
-    background-color: #ff4136;
-    color: #fff;
-}
-
-.priority-important {
-    background-color: #ff851b;
-    color: #fff;
-}
-
-.priority-not-important {
-    background-color: #2ecc40;
-    color: #fff;
+.urgent {
+    background-color: #ff6961;
+  }
+  
+.important {
+    background-color: #ffcc5c;
+  }
+  
+.not-important {
+    background-color: #a3daff;
 }

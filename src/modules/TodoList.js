@@ -19,15 +19,16 @@ function handleFormSubmit(event) {
     };
     
     const taskListItem = document.createElement('li');
+    taskListItem.classList.add(taskData.priority); // Add class based on priority level
     taskListItem.innerHTML = `
-      <div class="task-details">
-        <h3>${taskData.title}</h3>
-        <p>${taskData.description}</p>
-        <p>Due: ${taskData.dueDate}</p>
-        <p>Priority: ${taskData.priority}</p>
-      </div>
-      <button class="delete-btn">Delete</button>
-    `;
+    <div class="task-details">
+    <h3>${taskData.title}</h3>
+    <p>${taskData.description}</p>
+    <p>Due: ${taskData.dueDate}</p>
+    <p>Priority: ${taskData.priority}</p>
+  </div>
+  <button class="delete-btn">Delete</button>
+`;
     
     const taskList = document.querySelector('#taskList');
     taskList.appendChild(taskListItem);
