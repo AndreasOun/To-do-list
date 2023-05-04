@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <div class="container">
+        <button id="addTaskBtn">Add Task</button>
+        <ul id="taskList">
+            <!-- List items will be added dynamically using JavaScript -->
+        </ul>
+    </div>
+
+    <div id="addTaskPopup" class="popup">
+        <form id="addTaskForm">
+            <input type="text" id="titleInput" placeholder="Title">
+            <textarea id="descriptionInput" placeholder="Description"></textarea>
+            <input type="date" id="dueDateInput" placeholder="Due Date">
+            <label for="priorityInput">Priority:</label>
+            <select id="priorityInput">
+                <option value="urgent">Urgent</option>
+                <option value="important">Important</option>
+                <option value="not-important">Not Important</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+        <script type="module" src="/To-do-list/src/modules/TodoList.js"></script>
+    </body>
+</html>
