@@ -5,6 +5,11 @@ addTaskBtn.addEventListener('click', () => {
     addTaskPopup.style.display = 'block';
 });
 
+const cancelBtn = document.querySelector("#cancelBtn");
+cancelBtn.addEventListener("click", () => {
+  document.querySelector("#addTaskPopup").style.display = "none";
+});
+
 const addTaskForm = document.querySelector('#addTaskForm');
 addTaskForm.addEventListener('submit', handleFormSubmit);
 
