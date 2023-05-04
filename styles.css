@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #bae6fd;
     margin: 0;
     padding: 0;
 }
@@ -9,6 +9,7 @@ h1 {
     text-align: center;
     margin-top: 50px;
 }
+
 
 .container {
     max-width: 500px;
@@ -38,6 +39,10 @@ button {
     font-size: 16px;
 }
 
+button:hover {
+    transform: scale(1.2);
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -46,6 +51,7 @@ ul {
 li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    margin-top: 20px;
 }
 
 li:last-child {
@@ -110,13 +116,14 @@ li:last-child {
 }
 
 .urgent {
-    background-color: #ff6961;
+    background-color: #fda4af;
+    
   }
   
 .important {
-    background-color: #ffcc5c;
+    background-color: #fed7aa;
   }
   
 .not-important {
-    background-color: #a3daff;
+    background-color: #d9f99d;
 }
