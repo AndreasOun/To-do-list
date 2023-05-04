@@ -68,6 +68,11 @@ li:last-child {
     cursor: pointer;
 }
 
+#addTaskBtn {
+margin-top: 20px;
+}
+
+
 /* Add task popup */
 .popup {
     display: none;
