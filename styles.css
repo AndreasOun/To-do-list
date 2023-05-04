@@ -120,11 +120,3 @@ li:last-child {
 .not-important {
     background-color: #a3daff;
 }
-
-#cancelBtn {
-    background-color: red;
-}
-
-button:hover {
-    transform: scale(1.2);
-}
