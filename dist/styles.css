@@ -1,64 +1,77 @@
+/* General styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #bae6fd;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
     margin-top: 50px;
-}
-
-
-.container {
+    color: #333;
+  }
+  
+  .container {
     max-width: 500px;
     margin: 50px auto;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 30px;
-}
-
-input[type="text"], textarea, input[type="date"], select {
-    padding: 10px;
+  }
+  
+  input[type="text"],
+  textarea,
+  input[type="date"],
+  select {
+    padding: 12px;
     border: none;
     border-radius: 5px;
-    width: 80%;
-    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 15px;
     font-size: 16px;
-}
-
-button {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  button {
     background-color: #4CAF50;
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-}
-
-button:hover {
-    transform: scale(1.2);
-}
-
-ul {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #449d41;
+    transform: scale(1.05);
+  }
+  
+  ul {
     list-style: none;
     padding: 0;
-}
-
-li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+  }
+  
+  li {
+    padding: 15px;
+    border-radius: 5px;
     margin-top: 20px;
-}
-
-li:last-child {
-    border-bottom: none;
-}
-
-.delete-btn {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .delete-btn {
     float: right;
     background-color: #f44336;
     color: #fff;
@@ -66,15 +79,49 @@ li:last-child {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-#addTaskBtn {
-margin-top: 20px;
-}
-
-
-/* Add task popup */
-.popup {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .delete-btn:hover {
+    background-color: #cc3630;
+    transform: scale(1.05);
+  }
+  
+  #addTaskBtn {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #addTaskBtn:hover {
+    background-color: #449d41;
+    transform: scale(1.05);
+  }
+  
+  #cancelAddTaskBtn {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #cancelAddTaskBtn:hover {
+    background-color: #cc3630;
+    transform: scale(1.05);
+  }
+  
+  /* Add task popup */
+  .popup {
     display: none;
     position: fixed;
     top: 0;
@@ -83,9 +130,9 @@ margin-top: 20px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
-}
+  }
 
-.popup form {
+  .popup form {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -96,9 +143,15 @@ margin-top: 20px;
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 500px;
-}
+  }
 
-.popup input[type="submit"] {
+  /* Change the font color of the delete button to white */
+.delete-btn {
+    color: #fff;
+    }
+    
+    /* Style the Add Task and Cancel buttons */
+    #addTaskBtn {
     background-color: #4CAF50;
     color: #fff;
     padding: 10px;
@@ -106,29 +159,111 @@ margin-top: 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-}
-
-.popup label {
+    transition: transform 0.2s ease-in-out;
+    }
+    
+    #addTaskBtn:hover {
+    transform: scale(1.1);
+    }
+    
+    #cancelAddTaskBtn {
+    background-color: #f44336;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out;
+    }
+    
+    #cancelAddTaskBtn:hover {
+    transform: scale(1.1);
+    }
+    
+    /* Style the form elements inside the popup */
+    .popup form input[type="text"],
+    .popup form textarea,
+    .popup form input[type="date"],
+    .popup form select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    }
+    
+    .popup form label {
     display: block;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 5px;
-}
-
-.popup select {
-    width: 100%;
-    margin-bottom: 20px !important; 
-}
-
-.urgent {
-    background-color: #fda4af;
+    }
     
-  }
-  
-.important {
+    .popup form input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out;
+    }
+    
+    .popup form input[type="submit"]:hover {
+    transform: scale(1.1);
+    }
+    
+    /* Style the urgency levels */
+    .urgent {
+    background-color: #fda4af;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    }
+    
+    .important {
     background-color: #fed7aa;
-  }
-  
-.not-important {
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    }
+    
+    .not-important {
     background-color: #d9f99d;
-}
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    }
+    
+    /* Style the task item based on its urgency level */
+    li.urgent {
+    border-left: 5px solid #fda4af;
+    }
+    
+    li.important {
+    border-left: 5px solid #fed7aa;
+    }
+    
+    li.not-important {
+    border-left: 5px solid #d9f99d;
+    }
+    
+    /* Style the hover effect of task items */
+    li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Style the active state of the delete button */
+    .delete-btn:active {
+    transform: scale(0.95);
+    }
+
+    

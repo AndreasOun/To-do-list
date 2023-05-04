@@ -82,6 +82,9 @@ loadTasksFromLocalStorage();
 const addTaskBtn = document.querySelector('#addTaskBtn');
 const addTaskPopup = document.querySelector('#addTaskPopup');
 
+const cancelAddTaskBtn = document.querySelector('#cancelAddTaskBtn');
+cancelAddTaskBtn.addEventListener('click', closeAddTaskPopup);
+
 addTaskBtn.addEventListener('click', () => {
     addTaskPopup.style.display = 'block';
 });
