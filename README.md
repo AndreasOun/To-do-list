@@ -5,6 +5,3 @@ Made with HTML5, CSS3, Javascript and Node.js!
 
 Test the live demo here! https://andreasoun.github.io/To-do-list/
 
-# Screenshots
-
-[Screenshot](../../../../Downloads/logos/Capture.PNG)
