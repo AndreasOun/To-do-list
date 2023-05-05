@@ -10,3 +10,6 @@ User can delete tasks after completion.
 
 Test the live demo here! https://andreasoun.github.io/To-do-list/
 
+# Screenshot 
+
+![Capture](https://user-images.githubusercontent.com/95022949/236362154-0bdfa65c-0805-46ad-9d12-a962ee1a79f5.PNG)
